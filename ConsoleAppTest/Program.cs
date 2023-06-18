@@ -1,3 +1,0 @@
-﻿using HeavenLib;
-
-NameGen.Test();
