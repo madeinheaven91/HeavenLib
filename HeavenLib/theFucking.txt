@@ -1,0 +1,283 @@
+/*private static List<string> mNames = new()
+        {
+            "Ян",
+            "Саня",
+            "Васян",
+            "Леха",
+            "Мирон",
+            "Диман",
+            "Серега",
+            "Джон",
+            "Иван",
+            "Давид",
+            "Саддам",
+            "Богдан",
+            "Артемий",
+            "Алишер",
+            "Максон",
+            "Тайлер",
+            "Томми",
+            "Вьетнам",
+            "Варфоломей",
+            "Вавилен",
+            "Даниил",
+            "Данила",
+            "Олег",
+            "Федор",
+            "Игорь",
+            "Андрей",
+            "Кыргыз",
+            "Виктор",
+            "Володя",
+            "Гарри",
+            "Гарик",
+            "Вова",
+            "Вован",
+            "Альберт",
+            "Адольф",
+            "Владимир",
+            "Слава",
+            "Колян",
+            "Николай",
+            "Есимхан",
+            "Карл",
+            "Алексей",
+            "Дмитрий",
+            "Петр"
+        };
+        private static List<string> mSurnames = new()
+        {
+            "Топливо",
+            "Аристотель",
+            "Синий",
+            "Долматов",
+            "Белый",
+            "Брюханов",
+            "Черный",
+            "Порк",
+            "Говнов",
+            "Кринжов",
+            "Хусейн",
+            "Долбаеб",
+            "Казинский",
+            "Моргенштерн",
+            "Сигма",
+            "Кирпичфейс",
+            "Дерден",
+            "Шелби",
+            "Жопин",
+            "Татарский",
+            "Русский",
+            "Достоевский",
+            "Острый козырек",
+            "Поперечный",
+            "Корнеплод",
+            "Сухостой",
+            "Вялый",
+            "Шевцов",
+            "Прядко",
+            "Власов",
+            "Бандера",
+            "Айс",
+            "Геймер",
+            "Замай",
+            "Гослинг",
+            "Геометридеш",
+            "Дудка",
+            "Гнида",
+            "Мерзость",
+            "Гончар",
+            "Зубок",
+            "Деньги",
+            "Узкоглазый",
+            "Натурал",
+            "Теплый",
+            "Недалекий",
+            "Пушкин",
+            "Маяковский",
+            "Ивангай",
+            "Вейпер",
+            "Мамонт",
+            "Жан Клод Вандам",
+            "Скам",
+            "Маркс",
+            "Бебра",
+            "Нефть",
+            "Завод",
+            "Пшено",
+            "Пиво",
+            "Водка",
+            "Сидр",
+            "Бицепс",
+            "Стероид",
+            "Подъеб",
+            "Ебальник",
+            "Грязь"
+        };
+        private static List<string> fNames = new()
+        {
+            "Таня",
+            "Саша",
+            "Василиса",
+            "Настя",
+            "Руслана",
+            "Даша",
+            "Полина",
+            "Владислава",
+            "Лиза",
+            "Вика",
+            "Леночка",
+            "Алиса",
+            "Ульяна",
+            "Мику",
+            "Славя",
+            "Юля",
+            "Диляра",
+            "Тракторина",
+            "Дристня",
+            "Плотва",
+            "Анастасия",
+            "Лена",
+            "Галина",
+            "Лара",
+            "Мария",
+            "Карина",
+            "Марина",
+            "Катя",
+            "Владлена",
+        };
+        private static List<string> fSurnames = new()
+        {
+            "Радиоголова",
+            "Кюри",
+            "Синяя",
+            "Титцева",
+            "Белая",
+            "Брюханова",
+            "Черная",
+            "Порк",
+            "Говнова",
+            "Кринжова",
+            "Риос",
+            "Долбаебка",
+            "Бесконечное лето",
+            "Моргенштерн",
+            "Анимешница",
+            "Кирпичфейс",
+            "Кошкодевка",
+            "Подзаборная",
+            "Вонь",
+            "Землеройка",
+            "Няшка",
+            "Фитоняшка",
+            "Винишко",
+            "Ванильная",
+            "Крофт",
+            "Подкрадуля",
+            "Дудка",
+            "Двачевская",
+            "Шабашка",
+            "Чубакка",
+            "Семерка",
+            "Полторашка",
+            "Гнида",
+            "Мерзость",
+            "Узкоглазая",
+            "Корейка",
+            "Юмор",
+            "Вейп",
+            "Мамонтиха",
+            "Скам",
+            "Бебра",
+            "Нефть",
+            "Завод",
+            "Пшено",
+            "Пиво",
+            "Водка",
+            "Сидр",
+            "Бицепс",
+            "Стероид",
+            "Подъеб",
+            "Ебальник",
+            "Грязь",
+            "Деревня",
+            "Дно",
+            "Куча"
+        };
+
+        
+
+        public static string GenerateFullName(bool isMale)
+        {
+            Random rnd = new();
+            string name, surname;
+            if (isMale == true) {
+                name = mNames[rnd.Next(0, mNames.Count)];
+                surname = mSurnames[rnd.Next(0, mNames.Count)];
+                return name + " " + surname;
+            }
+            else
+            {
+                name = fNames[rnd.Next(0, fNames.Count)];
+                surname = fSurnames[rnd.Next(0, fSurnames.Count)];
+                return name + " " + surname;
+            }
+        }
+
+        public static string GenerateFullName()
+        {
+            Random rnd = new();
+            string name, surname;
+            name = mNames[rnd.Next(0, mNames.Count)];
+            surname = mSurnames[rnd.Next(0, mNames.Count)];
+            return name + " " + surname;
+        }
+
+        public static string GenerateName(bool isMale)
+        {
+            Random rnd = new();
+            string name;
+            if (isMale == true)
+            {
+                name = mNames[rnd.Next(0, mNames.Count)];
+                return name;
+            }
+            else
+            {
+                name = fNames[rnd.Next(0, fSurnames.Count)];
+                return name;
+            }
+        }
+
+        public static string GenerateName()
+        {
+            Random rnd = new();
+            string name;
+            name = mNames[rnd.Next(0, mNames.Count)];
+            return name;
+        }
+
+        public static string GenerateSurname(bool isMale)
+        {
+            Random rnd = new();
+            string surname;
+            if (isMale == true)
+            {
+                surname = mSurnames[rnd.Next(0, mSurnames.Count)];
+                return surname;
+            }
+            else
+            {
+                surname = fSurnames[rnd.Next(0, fSurnames.Count)];
+                return surname;
+            }
+        }
+
+        public static string GenerateSurname()
+        {
+            Random rnd = new();
+            string surname;
+            surname = mSurnames[rnd.Next(0, mSurnames.Count)];
+            return surname;
+        }
+        */
